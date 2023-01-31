@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="name">Name</string>
+    <string name="listid">ListId</string>
+    <string name="id">Id</string>
+    <string name="fetch_data">Fetch Data</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginHorizontal="20dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:elevation="1dp"
+            android:background="@color/transparent"
+            android:fitsSystemWindows="true">
+                <Button
+                    android:id="@+id/test"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="8dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:text="@string/fetch_data"
+                    android:textStyle="bold"
+                    android:background="@color/bg"
+                    android:textColor="@color/white"
+                    android:textSize="15dp"
+                    app:layout_scrollFlags="scroll">
+                </Button>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/employee_item_bg"
+                    android:padding="2dp"
+                    android:orientation="horizontal"
+                    app:layout_scrollFlags="scroll">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/listid"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/name"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="@string/id"
+                            android:textColor="@color/black"
+                            android:gravity="center"
+                            />
+                </LinearLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/employee_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        </androidx.recyclerview.widget.RecyclerView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
